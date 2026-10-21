@@ -68,7 +68,13 @@ For the latent-state HMM extension, the final information-gap calculation uses m
 
 The small final HMM CSV/JSON outputs needed by the unified reproduction notebook are mirrored in `results/`. The larger complete HMM archive will be provided separately as an archival research object.
 
+## Documentation
+
+- `REPRODUCIBILITY.md` maps each analysis component to its experiment notebook, archived outputs, and reproduced figures.
+- `CITATION.cff` provides repository citation metadata.
+
 ## Figures
+
 
 The `figures/` directory contains the 15 reproduced figures generated from the archived outputs, including the corrected HMM gap-decomposition figure.
 
@@ -76,7 +82,7 @@ The `figures/` directory contains the 15 reproduced figures generated from the a
 
 The unified notebook reproduces the reported analyses from completed outputs. It is intentionally not described as end-to-end retraining reproduction.
 
-The experiment notebooks under `notebooks/` are provided for provenance and full reruns, including the scratch Markov experiments, Qwen representation studies, causal intervention, reviewer robustness/coverage checks, Pythia cross-family validation, true-state predictive-readout control, and the latent-state HMM extension.
+The experiment notebooks under `notebooks/` are provided for provenance and full reruns, including the scratch Markov experiments, Qwen representation studies, causal intervention, robustness and coverage analyses, Pythia cross-family validation, true-state predictive-readout control, and the latent-state HMM extension.
 
 ## Release status
 
