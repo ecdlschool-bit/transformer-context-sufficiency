@@ -39,3 +39,8 @@ The unified notebook accepts duplicate-download suffixes such as `(1)`, `(2)`, e
 ## Reproducibility scope
 
 These are completed experimental outputs. The unified notebook reproduces the paper analyses from them without retraining the underlying models.
+
+
+## Archive naming
+
+Some result archives retain their original internal experiment labels. These filenames are preserved for provenance and compatibility with the unified reproduction notebook; the publication-facing notebook names are listed in `../notebooks/README.md`.
