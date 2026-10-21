@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the associated manuscript and this repository."
+title: "Transformer Context Sufficiency: Reproducibility Package"
+type: software
+authors:
+  - family-names: Karydas
+    given-names: Dimitris
+    orcid: "https://orcid.org/0009-0003-6213-440X"
+  - family-names: Margaritis
+    given-names: Dimosthenis
+    orcid: "https://orcid.org/0000-0002-8138-1276"
+  - family-names: Leligou
+    given-names: Helen C.
+    orcid: "https://orcid.org/0000-0002-1489-1495"
+year: 2026
+repository-code: "https://github.com/ecdlschool-bit/transformer-context-sufficiency"
