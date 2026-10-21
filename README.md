@@ -76,7 +76,7 @@ The `figures/` directory contains the 15 reproduced figures generated from the a
 
 The unified notebook reproduces the reported analyses from completed outputs. It is intentionally not described as end-to-end retraining reproduction.
 
-The experiment notebooks under `notebooks/` are provided for provenance and full reruns.
+The experiment notebooks under `notebooks/` are provided for provenance and full reruns, including the scratch Markov experiments, Qwen representation studies, causal intervention, reviewer robustness/coverage checks, Pythia cross-family validation, true-state predictive-readout control, and the latent-state HMM extension.
 
 ## Release status
 
