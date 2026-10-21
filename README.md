@@ -15,7 +15,7 @@ This repository provides two complementary levels of reproducibility:
 
 For the fastest verification, open and run:
 
-`Reproduce_Paper_From_Existing_Results_FOLDER_AWARE.ipynb`
+`reproduce_paper.ipynb`
 
 The notebook automatically searches the repository root and `results/` for the archived experiment outputs.
 
@@ -25,7 +25,7 @@ A successful run ends with:
 
 For immediate visual inspection without rerunning, see:
 
-`Reproduce_Paper_From_Existing_Results_FOLDER_AWARE_EXECUTED.ipynb`
+`reproduce_paper_executed.ipynb`
 
 The executed notebook contains the reproduced tables, figures, audit outputs, and final PASS result.
 
@@ -36,8 +36,8 @@ The executed notebook contains the reproduced tables, figures, audit outputs, an
 ├── README.md
 ├── requirements.txt
 ├── requirements-experiments.txt
-├── Reproduce_Paper_From_Existing_Results_FOLDER_AWARE.ipynb
-├── Reproduce_Paper_From_Existing_Results_FOLDER_AWARE_EXECUTED.ipynb
+├── reproduce_paper.ipynb
+├── reproduce_paper_executed.ipynb
 ├── notebooks/      # original experiment notebooks
 ├── results/        # archived completed experiment outputs
 └── figures/        # reproduced publication and supplementary figures
@@ -51,7 +51,7 @@ For analysis-only reproduction:
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-jupyter notebook Reproduce_Paper_From_Existing_Results_FOLDER_AWARE.ipynb
+jupyter notebook reproduce_paper.ipynb
 ```
 
 For full experimental reruns, additionally install:
