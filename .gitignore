@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets / credentials
+.env
+.env.*
+*.pem
+*.key
+credentials*
+secrets*
+token*
+
+# Large/local caches and temporary outputs
+cache/
+caches/
+checkpoints/
+tmp/
+temp/
+*.log
+
+# Local generated analysis output
+Reproduced_Paper_Outputs/
