@@ -2,7 +2,7 @@
 
 Reproducibility package for the manuscript:
 
-**Context Sufficiency in Transformers: From Information-Theoretic Limits to Representational Accessibility, Predictive Readout, and Native Functional Dependence**
+**Context Sufficiency in Transformers: Information-Theoretic Limits, Native Functional Dependence, Representational Accessibility, and Predictive Readout**
 
 ## Repository purpose
 
