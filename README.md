@@ -4,55 +4,83 @@ Reproducibility package for the manuscript:
 
 **Context Sufficiency in Transformers: From Information-Theoretic Limits to Representational Accessibility, Predictive Readout, and Native Functional Dependence**
 
-## Status
+## Repository purpose
 
-This repository is currently **private and under preparation** for the manuscript revision.  
-Do not treat the repository contents as a final archival release until a versioned release is created.
+This repository provides two complementary levels of reproducibility:
 
-## Reproducibility design
+1. **Analysis reproduction from archived outputs** — reproduces the reported tables, figures, and summary statistics without retraining models.
+2. **Full experimental provenance** — retains the original experiment notebooks used to generate the archived outputs.
 
-The repository separates two levels of reproducibility:
+## Quick reproduction
 
-1. **Analysis reproduction from archived experiment outputs**  
-   A unified notebook reproduces the reported tables, figures, and summary statistics from the archived outputs, without retraining models.
-
-2. **Full experimental provenance**  
-   The original experiment notebooks and configurations are retained for rerunning the underlying experiments.
-
-The unified analysis notebook is:
+For the fastest verification, open and run:
 
 `Reproduce_Paper_From_Existing_Results_FOLDER_AWARE.ipynb`
+
+The notebook automatically searches the repository root and `results/` for the archived experiment outputs.
 
 A successful run ends with:
 
 `PAPER REPRODUCTION FROM EXISTING RESULTS: PASS`
 
-## Planned repository structure
+For immediate visual inspection without rerunning, see:
+
+`Reproduce_Paper_From_Existing_Results_FOLDER_AWARE_EXECUTED.ipynb`
+
+The executed notebook contains the reproduced tables, figures, audit outputs, and final PASS result.
+
+## Repository structure
 
 ```text
 .
 ├── README.md
 ├── requirements.txt
-├── .gitignore
+├── requirements-experiments.txt
 ├── Reproduce_Paper_From_Existing_Results_FOLDER_AWARE.ipynb
-├── notebooks/
-├── results/
-└── figures/
+├── Reproduce_Paper_From_Existing_Results_FOLDER_AWARE_EXECUTED.ipynb
+├── notebooks/      # original experiment notebooks
+├── results/        # archived completed experiment outputs
+└── figures/        # reproduced publication and supplementary figures
 ```
+
+## Installation
+
+For analysis-only reproduction:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+jupyter notebook Reproduce_Paper_From_Existing_Results_FOLDER_AWARE.ipynb
+```
+
+For full experimental reruns, additionally install:
+
+```bash
+pip install -r requirements-experiments.txt
+```
+
+GPU-enabled PyTorch installation may depend on the local CUDA environment; use the appropriate PyTorch build for the target system.
 
 ## Important methodological note
 
-For the latent-state HMM extension, the corrected information-gap calculation uses matched/same-history quantities. Older negative-gap intermediate outputs are not part of the final analysis and must not be used.
+For the latent-state HMM extension, the final information-gap calculation uses matched/same-history quantities. Older negative-gap intermediate outputs are obsolete and are not part of the final analysis.
 
-## Release policy
+The small final HMM CSV/JSON outputs needed by the unified reproduction notebook are mirrored in `results/`. The larger complete HMM archive will be provided separately as an archival research object.
 
-Before this repository is made public, it will receive a final audit for:
-- credentials and tokens,
-- personal/local paths,
-- obsolete intermediate results,
-- reviewer/editor correspondence,
-- licensing and third-party model constraints,
-- consistency between manuscript figures/tables and archived outputs.
+## Figures
+
+The `figures/` directory contains the 15 reproduced figures generated from the archived outputs, including the corrected HMM gap-decomposition figure.
+
+## Reproducibility scope
+
+The unified notebook reproduces the reported analyses from completed outputs. It is intentionally not described as end-to-end retraining reproduction.
+
+The experiment notebooks under `notebooks/` are provided for provenance and full reruns.
+
+## Release status
+
+This repository is currently **private and under final preparation** for the manuscript revision. Before public release, it will receive a final audit for credentials, local paths, obsolete outputs, licensing, and consistency with the submitted manuscript.
 
 ## License
 
