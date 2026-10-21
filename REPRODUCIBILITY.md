@@ -44,12 +44,12 @@ GPU-enabled PyTorch builds should be selected for the local CUDA environment.
 
 | Analysis component | Primary experiment notebook | Archived output |
 | --- | --- | --- |
-| Markov context sufficiency | `Part1_Markov_Context_Sufficiency_A100_v2.ipynb` | `Markov_Context_FINAL_ANALYSIS.zip` |
+| Markov context sufficiency | `Part1_Markov_Context_Sufficiency_A100.ipynb` | `Markov_Context_FINAL_ANALYSIS.zip` |
 | Frozen Qwen representation/readout | `Part2_Sufficiency_Representation_A100.ipynb` | `Part2_Sufficiency_Representation_RESULTS.zip` |
 | Visible-input vs state control | `Part2_InputVsState_Control_A100.ipynb` | included in the Part II analysis package |
-| Native causal intervention | `Part1_Causal_Intervention_A100_FINAL_v2.ipynb` | `Part1_CAUSAL_INTERVENTION_RESULTS.zip` |
-| Token-map/probe/boundary robustness | `Reviewer_Robustness_Checks_A100_FINAL.ipynb` | `Reviewer_Robustness_Checks_RESULTS.zip` |
-| True-state coverage | `Reviewer_A3b_TrueState_Coverage_A100_v2.ipynb` | `Reviewer_A3b_TrueState_Coverage_RESULTS.zip` |
+| Native causal intervention | `Part1_Causal_Intervention_A100.ipynb` | `Part1_CAUSAL_INTERVENTION_RESULTS.zip` |
+| Token-map/probe/boundary robustness | `Robustness_Checks_A100.ipynb` | `Reviewer_Robustness_Checks_RESULTS.zip` |
+| True-state coverage | `True_State_Coverage_A100.ipynb` | `Reviewer_A3b_TrueState_Coverage_RESULTS.zip` |
 | True-state predictive readout | `Part2_TrueState_PredictiveReadout_Control.ipynb` | `Part2_TrueState_PredictiveReadout_Control_RESULTS.zip` |
 | Pythia cross-family validation | `Part2_Pythia_CrossFamily_Validation_A100.ipynb` | `Part2_Pythia_CrossFamily_Validation_RESULTS.zip` |
 | HMM latent-state extension | `HMM_Latent_State_Extension_A100.ipynb` | lightweight final summaries in `results/`; full archive deposited separately |
