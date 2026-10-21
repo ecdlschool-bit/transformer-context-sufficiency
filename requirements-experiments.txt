@@ -3,4 +3,6 @@ pandas
 matplotlib
 jupyter
 torch
-transformers
+transformers>=4.50,<5
+accelerate>=1.0
+safetensors>=0.4
