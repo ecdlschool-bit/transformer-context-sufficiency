@@ -34,3 +34,8 @@ temp/
 
 # Local generated analysis output
 Reproduced_Paper_Outputs/
+
+# Isolated reproduction diagnostics
+validation-run*/
+.venv*/
+run-environment.json

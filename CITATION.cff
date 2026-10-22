@@ -13,3 +13,4 @@ authors:
     given-names: Helen C.
     orcid: "https://orcid.org/0000-0002-1489-1495"
 repository-code: "https://github.com/ecdlschool-bit/transformer-context-sufficiency"
+license: MIT
