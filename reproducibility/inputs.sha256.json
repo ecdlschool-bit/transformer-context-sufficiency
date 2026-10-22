@@ -11,6 +11,11 @@
     "results/Part2_Sufficiency_Representation_RESULTS.zip": "e9c03c38385c22c2a77b2e6e1642cb7365e2e43c0bcc92d3df64a8c5aecafab5",
     "results/Part2_TrueState_PredictiveReadout_Control_RESULTS.zip": "5e6a212f9ea446b4209e73df0bb26a3f933de557951d07874650db328d3a466b",
     "results/Reviewer_A3b_TrueState_Coverage_RESULTS.zip": "e63769028b920f2be5cba0464f86efe2e41cbcd870fe25d3f2859c02a76630e1",
-    "results/Reviewer_Robustness_Checks_RESULTS.zip": "efe75d6bf1d99785716282568463afa9be3874d9100196edbabbfaede69377b6"
-  }
+    "results/Reviewer_Robustness_Checks_RESULTS.zip": "efe75d6bf1d99785716282568463afa9be3874d9100196edbabbfaede69377b6",
+    "results/Part2_THEORY_BASELINE_EXACT_AUDIT.csv": "0116a645f792620e47ec09a9716890217fd839fe197f4a89bb336fddca492a02",
+    "results/Part2_ShuffledLabel_Corrected_10seed_RESULTS.zip": "42c91fca8f0c1e57405c41f1eb7c2c7410cb6a2d5ec29133ea4d5247e92260f2",
+    "results/V32K3_Targeted_Control_RESULTS.zip": "cfecef507c830348fd9767430d7309e9253a8b2eb0d1cdb0ac7fbfe1b4a7fc8a",
+    "results/reviewer_R1_5_HL_uncertainty_raw.csv": "f7aeb053a6193d3704cc76315821a179b757976cfe7f1bbbdc4617941f71e728"
+  },
+  "provenance_note": "Original ten inputs from source_commit; four revision inputs supplied from original experiment exports and Jupyter raw CSV, with byte-level SHA-256 fingerprints."
 }

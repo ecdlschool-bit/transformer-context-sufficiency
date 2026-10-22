@@ -1,5 +1,11 @@
 # Archived experiment outputs
 
+Final-revision inputs additionally include the stationary baseline audit CSV,
+the corrected ten-seed shuffled-label archive, the V32-k3 targeted scaling
+archive, and the 2,400-row Monte Carlo raw CSV recovered from Jupyter.
+The unified reproduction applies these corrections before exporting final
+tables; historical summaries inside immutable archives retain their provenance.
+
 This directory contains the completed experiment outputs used by the unified reproduction notebook.
 
 ## Required archives
