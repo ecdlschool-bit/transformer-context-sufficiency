@@ -1,0 +1,16 @@
+{
+  "source_commit": "c097b1d6a64d70d43990558d282a6812f7e1c591",
+  "algorithm": "sha256",
+  "files": {
+    "results/HMM_native_oracle_summary.csv": "c403a2f873d73bf33ecf3307d961b42bef6a16006f39c486fc0a4dd74c7f375a",
+    "results/HMM_Oracle_Gap_Fix_GPU_RESULTS.zip": "5349142fcc50be9e9b0bd95e612990babd0415d90c8dc0b08c8f4d515f1871e3",
+    "results/HMM_probe_summary.csv": "5cf3e577f99978c99444e6744a1938c66c058ba58cca5f07db9690392305a08a",
+    "results/Markov_Context_FINAL_ANALYSIS.zip": "e05c6a9502addca707ca100c66d4412536c0c82af86b63b9abf8ff0cc9fb2cfe",
+    "results/Part1_CAUSAL_INTERVENTION_RESULTS.zip": "84329dca7d339d3b88071f67c26aec4bb5ff9311efd58d0a3c950dbbc370bf6f",
+    "results/Part2_Pythia_CrossFamily_Validation_RESULTS.zip": "97c31bf9148f57f444105f96b016adb922065d60294b8780cbbef6e49c75df80",
+    "results/Part2_Sufficiency_Representation_RESULTS.zip": "e9c03c38385c22c2a77b2e6e1642cb7365e2e43c0bcc92d3df64a8c5aecafab5",
+    "results/Part2_TrueState_PredictiveReadout_Control_RESULTS.zip": "5e6a212f9ea446b4209e73df0bb26a3f933de557951d07874650db328d3a466b",
+    "results/Reviewer_A3b_TrueState_Coverage_RESULTS.zip": "e63769028b920f2be5cba0464f86efe2e41cbcd870fe25d3f2859c02a76630e1",
+    "results/Reviewer_Robustness_Checks_RESULTS.zip": "efe75d6bf1d99785716282568463afa9be3874d9100196edbabbfaede69377b6"
+  }
+}

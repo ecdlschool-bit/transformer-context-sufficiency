@@ -20,6 +20,32 @@ contains the same analysis with stored outputs for immediate inspection.
 
 ## 2. Analysis environment
 
+For a pinned, headless CPU analysis environment (Python 3.12), install:
+
+```bash
+python -m venv .venv
+# Linux/macOS:
+source .venv/bin/activate
+# Windows PowerShell instead:
+# .\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements-analysis.txt
+python scripts/verify_inputs.py
+python scripts/run_reproduction.py
+```
+
+The runner creates a fresh temporary working directory containing only the ten
+declared result inputs. It starts a kernel using the same Python interpreter,
+executes all analysis cells, and exits with an error if any numerical check
+fails. It saves figures, tables, the executed notebook, and a validation report
+in a new `validation-run/` directory. To repeat, supply a new directory with
+`--output validation-run-2`. No retraining, external data, or model downloads
+are required. The output directory must not already exist, preventing stale
+figures from satisfying the checks.
+
+For interactive use, the existing installation below is also supported; the
+pinned file above defines the analysis verification stack.
+
+
 Install:
 
 ```bash
@@ -83,6 +109,55 @@ The final HMM information gap is computed from matched/same-history quantities. 
 
 The authoritative corrected calculation is implemented in `HMM_Information_Gap_Correction_GPU.ipynb` and archived in `HMM_Oracle_Gap_Fix_GPU_RESULTS.zip`.
 
-## 7. Scope
+## 7. Numerical checks and integrity
+
+`reproducibility/inputs.sha256.json` records the exact analysis inputs from
+commit `c097b1d6a64d70d43990558d282a6812f7e1c591`. The verifier checks every
+SHA-256 and ZIP member CRC before execution. This is the source commit of the
+result data, not the commit of later documentation changes.
+
+The analysis notebook checks stored experiment audits, six A1/A4 numerical
+references (absolute tolerance 5e-6, relative tolerance zero), and four corrected
+HMM references (relative tolerance 2e-6, absolute tolerance 1e-15). It also
+requires all 15 PNG figures to exist in the fresh output directory. Figure
+pixels are not required to be bit-identical across fonts/rendering platforms.
+These checks cover selected numerical fingerprints, not every manuscript
+sentence or table cell. Any failed final check raises an exception after saving
+the audit.
+
+## 8. Full-rerun instructions
+
+See `reproducibility/EXPERIMENTS.md` for execution order, working directories,
+checkpoint prerequisites, diagnostic switches, seed counts, resource limitations,
+and historical environment information. The analysis pins are distinct from
+the incomplete historical GPU environment. Full training has not been revalidated
+by the CPU analysis run.
+
+## 9. Frozen delivery during review
+
+The repository stays private during review. Provide a download of the exact
+reviewed commit as MDPI Supplementary Material. The planned Zenodo **private
+draft preview** contains that same snapshot and the complete
+`HMM_Latent_State_Extension_RESULTS.zip` separately. Do not describe a draft
+preview as a published archival DOI.
+
+The full HMM archive is optional for CPU analysis: the required native/probe
+summary CSVs and corrected gap ZIP are already in `results/`. For inspection,
+the full archive contains `HMM_Latent_State_Extension/` with configuration,
+run JSON, CSVs, figures, and checkpoints. It need not be extracted for analysis.
+
+At final freeze, record the delivered snapshot commit and SHA-256 checksums of
+the snapshot ZIP and full HMM ZIP in an external delivery manifest. Keep that
+manifest beside the ZIPs; a checksum manifest cannot include its own checksum.
+No Zenodo upload, public release, or repository-visibility change is performed
+by these scripts.
+
+## 10. Scope
 
 The unified notebook provides analysis reproduction from completed outputs. The experiment notebooks provide the full computational provenance required to rerun the underlying experiments.
+
+Generate the delivery manifest without uploading anything:
+
+```bash
+python scripts/delivery_manifest.py --commit FULL_COMMIT_SHA --snapshot repository-snapshot.zip --hmm HMM_Latent_State_Extension_RESULTS.zip --output delivery-manifest.json
+```

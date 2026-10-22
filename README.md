@@ -68,6 +68,23 @@ For the latent-state HMM extension, the final information-gap calculation uses m
 
 The small final HMM CSV/JSON outputs needed by the unified reproduction notebook are mirrored in `results/`. The larger complete HMM archive will be provided separately as an archival research object.
 
+## Automated verification
+
+For CPU-only verification from the frozen archives:
+
+```bash
+python -m pip install -r requirements-analysis.txt
+python scripts/verify_inputs.py
+python scripts/run_reproduction.py
+```
+
+The runner uses a fresh temporary directory and writes to a new
+`validation-run/` directory. It verifies input checksums, runs every analysis
+cell, requires all 15 figures, and fails on numerical-audit errors. See
+`REPRODUCIBILITY.md` for tolerances and `reproducibility/EXPERIMENTS.md` for
+GPU rerun prerequisites and diagnostics. This verifies analysis from archived
+outputs; it does not establish a new full-training replication.
+
 ## Documentation
 
 - `REPRODUCIBILITY.md` maps each analysis component to its experiment notebook, archived outputs, and reproduced figures.
@@ -90,4 +107,4 @@ This repository is currently **private and under final preparation** for the man
 
 ## License
 
-No license has been selected yet. Until a license is explicitly added, normal copyright rules apply.
+The project-authored code and documentation are distributed under the MIT license; see `LICENSE`. Third-party model weights and dependencies retain their own licenses.
