@@ -18,3 +18,11 @@ The `A100` suffix records the original GPU-oriented execution environment. Compa
 Some archived output filenames retain their original internal labels for compatibility with the unified reproduction notebook.
 
 For paper-level verification, use the root-level `reproduce_paper.ipynb`.
+# Final revision additions
+
+The stationary-baseline audit, corrected ten-seed shuffled-label control, and
+targeted V32-k3 notebooks are supplied with their completed result exports.
+See ../reproducibility/EXPERIMENTS.md for execution order and prerequisites.
+Outputs are cleared; the unified executed reproduction contains the validated
+analysis outputs. GPU stages were not rerun during this verification.
+

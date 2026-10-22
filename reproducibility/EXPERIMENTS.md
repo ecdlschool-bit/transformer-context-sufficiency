@@ -91,3 +91,25 @@ No portable end-to-end GPU runtime has been measured for this package; do not
 interpret an analysis runtime as an experimental-rerun estimate. Record actual
 timing on the target machine. GPU kernels and Monte Carlo estimators can produce
 cross-platform differences even with fixed seeds.
+
+
+## Additional notebooks required for the final revision
+
+- `Part2_Theory_Baseline_Exact_Audit_A100_v2.ipynb`: recompute stationary
+  entropy baselines for the original 30 Qwen source kernels. Feed its CSV to
+  the unified reproduction before interpreting predictive readout excesses.
+- `Part2_ShuffledLabel_Corrected_10seed_A100.ipynb`: independent permutations
+  of training and validation labels; true test labels. Its result archive
+  supersedes historical shuffled metrics from the combined input/state run.
+- `V32K3_Targeted_Control_A100.ipynb`: base/large models, three seeds, and
+  12k/24k/48k training budgets. Its archive includes the raw scaling CSV.
+- The final Monte Carlo audit cell in the main scratch notebook generates
+  `reviewer_R1_5_HL_uncertainty_raw.csv`. Use the unified reproduction's
+  within-source summary for manuscript uncertainty; the original pooled
+  summary includes variation between different source kernels.
+
+These notebooks were syntax-checked, but GPU stages were not newly executed.
+The analysis notebook contains the explicit publication aggregation formulas
+and recomputes the principal Part I and corrected Part II tables from the
+archived per-run data. Stored experiment-specific audit summaries remain
+inputs for the intervention/robustness analyses.

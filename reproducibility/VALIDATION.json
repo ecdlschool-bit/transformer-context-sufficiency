@@ -11,9 +11,9 @@
     "nbclient": "0.10.2",
     "ipykernel": "6.30.1"
   },
-  "checks": 32,
+  "checks": 44,
   "figures": 15,
-  "elapsed_seconds": 35.81,
+  "elapsed_seconds": 11.84,
   "validation_date": "2026-10-22",
   "scope": "CPU analysis from archived outputs; full GPU training not rerun"
 }

@@ -33,7 +33,7 @@ python scripts/verify_inputs.py
 python scripts/run_reproduction.py
 ```
 
-The runner creates a fresh temporary working directory containing only the ten
+The runner creates a fresh temporary working directory containing only the fourteen
 declared result inputs. It starts a kernel using the same Python interpreter,
 executes all analysis cells, and exits with an error if any numerical check
 fails. It saves figures, tables, the executed notebook, and a validation report
@@ -78,7 +78,7 @@ GPU-enabled PyTorch builds should be selected for the local CUDA environment.
 | True-state coverage | `True_State_Coverage_A100.ipynb` | `Reviewer_A3b_TrueState_Coverage_RESULTS.zip` |
 | True-state predictive readout | `Part2_TrueState_PredictiveReadout_Control.ipynb` | `Part2_TrueState_PredictiveReadout_Control_RESULTS.zip` |
 | Pythia cross-family validation | `Part2_Pythia_CrossFamily_Validation_A100.ipynb` | `Part2_Pythia_CrossFamily_Validation_RESULTS.zip` |
-| HMM latent-state extension | `HMM_Latent_State_Extension_A100.ipynb` | lightweight final summaries in `results/`; full archive deposited separately |
+| HMM latent-state extension | `HMM_Latent_State_Extension_A100.ipynb` | lightweight final summaries in `results/`; full archive prepared for separate private reviewer delivery |
 | Corrected HMM information gap | `HMM_Information_Gap_Correction_GPU.ipynb` | `HMM_Oracle_Gap_Fix_GPU_RESULTS.zip` |
 
 ## 5. Figure map
@@ -161,3 +161,33 @@ Generate the delivery manifest without uploading anything:
 ```bash
 python scripts/delivery_manifest.py --commit FULL_COMMIT_SHA --snapshot repository-snapshot.zip --hmm HMM_Latent_State_Extension_RESULTS.zip --output delivery-manifest.json
 ```
+
+
+## Revision corrections and raw-data provenance
+
+The original ten archives/CSVs retain their original checksums. Four additional
+inputs are now supplied from the original experiment exports: the stationary
+baseline audit CSV, corrected shuffled-label archive, V32-k3 scaling archive,
+and the 2,400-row `reviewer_R1_5_HL_uncertainty_raw.csv` recovered from the
+Jupyter server. The manifest identifies both provenance groups explicitly.
+
+The reproduction notebook now recomputes Part I summaries/contrasts from the
+clean per-run publication table, targeted scaling from its raw CSV, and Qwen
+summaries/contrasts from raw probe losses joined to the stationary baseline
+audit on k/L/seed. It updates the shuffled-label columns using the corrected
+ten-seed results. Older summaries inside immutable archives are historical
+inputs, not the authoritative final analysis. Model-size differences are
+descriptive because token maps are sampled independently across checkpoints.
+
+Monte Carlo uncertainty is computed separately within each source kernel
+(V, k, L, source_seed, N), with 20 repetitions per condition. The standard
+deviation across those repetitions, its standard error, and the approximate
+normal 95% halfwidth (1.96 SE) are exported. Pooling different source kernels
+would conflate source variability and Monte Carlo error and is not used for
+the manuscript's precision statements. At N=500,000 the within-kernel SD range
+is 0.0002063852-0.0004044759 and maximum halfwidth is 0.0001772694 nats.
+
+The 44 checks include six corrected Table 4 readout values, the corrected
+shuffled-label ranges, and raw Monte Carlo completeness/identity/uncertainty
+checks, in addition to the original checks. They are selected numerical and
+artifact checks, not a full new GPU experiment or a proof of every claim.
