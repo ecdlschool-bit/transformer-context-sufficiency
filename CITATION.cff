@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this reproducibility package, please cite the associated manuscript and this repository."
+message: "If you use this reproducibility package, please cite the published article and this repository."
 title: "Transformer Context Sufficiency: Reproducibility Package"
 type: software
 authors:
@@ -14,3 +14,23 @@ authors:
     orcid: "https://orcid.org/0000-0002-1489-1495"
 repository-code: "https://github.com/ecdlschool-bit/transformer-context-sufficiency"
 license: MIT
+
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Karydas
+      given-names: "Dimitris"
+      orcid: "https://orcid.org/0009-0003-6213-440X"
+    - family-names: Margaritis
+      given-names: "Dimosthenis"
+      orcid: "https://orcid.org/0000-0002-8138-1276"
+    - family-names: Leligou
+      given-names: "Helen C."
+      orcid: "https://orcid.org/0000-0002-1489-1495"
+  title: "Context Sufficiency in Transformers: Information-Theoretic Limits, Native Functional Dependence, Representational Accessibility, and Predictive Readout"
+  journal: Computers
+  year: 2026
+  volume: "15"
+  issue: "11"
+  start: "769"
+  url: "https://www.mdpi.com/2073-431X/15/11/769"

@@ -1,8 +1,12 @@
 # Transformer Context Sufficiency
 
-Reproducibility package for the manuscript:
+Reproducibility package for the published article:
 
 **Context Sufficiency in Transformers: Information-Theoretic Limits, Native Functional Dependence, Representational Accessibility, and Predictive Readout**
+
+Dimitris Karydas, Dimosthenis Margaritis and Helen C. Leligou. *Computers* **2026**, 15(11), 769.
+
+[Published article](https://www.mdpi.com/2073-431X/15/11/769)
 
 ## Repository purpose
 
@@ -66,7 +70,7 @@ GPU-enabled PyTorch installation may depend on the local CUDA environment; use t
 
 For the latent-state HMM extension, the final information-gap calculation uses matched/same-history quantities. Older negative-gap intermediate outputs are obsolete and are not part of the final analysis.
 
-The small final HMM CSV/JSON outputs needed by the unified reproduction notebook are mirrored in `results/`. The larger complete HMM archive will be provided separately as an archival research object.
+The small final HMM CSV/JSON outputs needed by the unified reproduction notebook are mirrored in `results/`. The complete HMM archive is maintained separately from the lightweight GitHub inputs. The archival deposit designated in the article is [Zenodo 10.5281/zenodo.23528707](https://doi.org/10.5281/zenodo.23528707); the deposit must be published before that reserved DOI provides public access. The full HMM archive is not required for analysis-only reproduction.
 
 ## Automated verification
 
@@ -101,9 +105,13 @@ The unified notebook reproduces the reported analyses from completed outputs. It
 
 The experiment notebooks under `notebooks/` are provided for provenance and full reruns, including the scratch Markov experiments, Qwen representation studies, causal intervention, robustness and coverage analyses, Pythia cross-family validation, true-state predictive-readout control, and the latent-state HMM extension.
 
-## Release status
+## Publication and frozen snapshot
 
-This repository is currently **private and under final preparation** for the manuscript revision. Before public release, it will receive a final audit for credentials, local paths, obsolete outputs, licensing, and consistency with the submitted manuscript.
+The article is published in *Computers*; the publication-facing metadata is maintained on the default branch.
+
+The exact reproducibility snapshot cited in the article is commit [`ad6cdf33e91a767634b5cbfd06e85b8cbe0fd14d`](https://github.com/ecdlschool-bit/transformer-context-sufficiency/tree/ad6cdf33e91a767634b5cbfd06e85b8cbe0fd14d). Later documentation updates do not replace this frozen snapshot or change its experiment data. The separately prepared snapshot ZIP and full HMM ZIP retain their original checksums for the archival deposit.
+
+Analysis reproduction uses the archived outputs and requires no GPU training rerun. Complete historical GPU environment details were not recorded for every experiment; see `reproducibility/EXPERIMENTS.md` for the documented provenance and limitations.
 
 ## License
 

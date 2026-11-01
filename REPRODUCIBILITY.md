@@ -78,7 +78,7 @@ GPU-enabled PyTorch builds should be selected for the local CUDA environment.
 | True-state coverage | `True_State_Coverage_A100.ipynb` | `Reviewer_A3b_TrueState_Coverage_RESULTS.zip` |
 | True-state predictive readout | `Part2_TrueState_PredictiveReadout_Control.ipynb` | `Part2_TrueState_PredictiveReadout_Control_RESULTS.zip` |
 | Pythia cross-family validation | `Part2_Pythia_CrossFamily_Validation_A100.ipynb` | `Part2_Pythia_CrossFamily_Validation_RESULTS.zip` |
-| HMM latent-state extension | `HMM_Latent_State_Extension_A100.ipynb` | lightweight final summaries in `results/`; full archive prepared for separate private reviewer delivery |
+| HMM latent-state extension | `HMM_Latent_State_Extension_A100.ipynb` | lightweight final summaries in `results/`; full archive prepared for the separate archival deposit designated in the article |
 | Corrected HMM information gap | `HMM_Information_Gap_Correction_GPU.ipynb` | `HMM_Oracle_Gap_Fix_GPU_RESULTS.zip` |
 
 ## 5. Figure map
@@ -133,24 +133,32 @@ and historical environment information. The analysis pins are distinct from
 the incomplete historical GPU environment. Full training has not been revalidated
 by the CPU analysis run.
 
-## 9. Frozen delivery during review
+## 9. Published article and frozen archival snapshot
 
-The repository stays private during review. Provide a download of the exact
-reviewed commit as MDPI Supplementary Material. The planned Zenodo **private
-draft preview** contains that same snapshot and the complete
-`HMM_Latent_State_Extension_RESULTS.zip` separately. Do not describe a draft
-preview as a published archival DOI.
+The associated article is published in [*Computers* 2026, 15(11), 769](https://www.mdpi.com/2073-431X/15/11/769).
+
+The exact repository snapshot cited in the article is commit
+`ad6cdf33e91a767634b5cbfd06e85b8cbe0fd14d`. Publication-facing documentation
+may change on the default branch; the cited commit and the prepared frozen ZIP
+remain the archival reference.
+
+The archival deposit designated in the article has the reserved DOI
+[10.5281/zenodo.23528707](https://doi.org/10.5281/zenodo.23528707). Its prepared
+files are the frozen repository ZIP and the complete
+`HMM_Latent_State_Extension_RESULTS.zip`. A reserved DOI or private draft preview
+is not a published archival record; publication of the existing draft is needed
+for public access. Repository documentation does not itself publish the deposit.
 
 The full HMM archive is optional for CPU analysis: the required native/probe
-summary CSVs and corrected gap ZIP are already in `results/`. For inspection,
-the full archive contains `HMM_Latent_State_Extension/` with configuration,
-run JSON, CSVs, figures, and checkpoints. It need not be extracted for analysis.
+summary CSVs and corrected gap ZIP are already in `results/`. The complete
+archive retains configuration, run JSON, CSVs, figures and checkpoints for
+provenance. Historical HMM intermediate outputs are not the authoritative
+corrected same-history result.
 
-At final freeze, record the delivered snapshot commit and SHA-256 checksums of
-the snapshot ZIP and full HMM ZIP in an external delivery manifest. Keep that
-manifest beside the ZIPs; a checksum manifest cannot include its own checksum.
-No Zenodo upload, public release, or repository-visibility change is performed
-by these scripts.
+The prepared delivery manifest records the original snapshot commit and
+SHA-256 checksums of the snapshot ZIP and full HMM ZIP. Preserve those files
+and checksums when publishing the existing archival draft. Later metadata
+updates are separate from the frozen research artifacts.
 
 ## 10. Scope
 
